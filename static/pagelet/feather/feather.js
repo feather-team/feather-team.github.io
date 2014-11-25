@@ -1,1 +1,1 @@
-require.async(":jquery",function(){});
+require.async(":jquery",function(e){e(document).delegate(".feather-item","click",function(){alert("lalalala")})});
