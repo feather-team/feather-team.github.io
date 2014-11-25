@@ -1,14 +1,30 @@
 <html>
 <head>
-<title>Feather</title><link rel="stylesheet" href="/static/css/common.css?v=4682a86" type="text/css" /><script src="/static/js/load.js?v=66a523a"></script><script>require.config={"baseurl":"/static/js","rules":[[/^([^:]+)?\:((?:[^\/]+\/)*)((?:(?!\.js).)+?)(\.js)?$/,function (_0, _1, _2, _3, _4){                    return (_1 ? _1 + '/' : '') + 'mod/' + _2 + _3 + (_4 ? _4 : ('/' + _3 + '.js'));                }],[/^.+$/,function (all){                    return /\.([^\.]+)$/.test(all) ? all : (all + '.js');                }]],"domain":""}</script><script>require.config.deps={}</script><script>require.config.map={"/static/js/index.js?v=acfe1e0":["/static/js/index.js"]}</script></head>
+<title>feather</title><link rel="stylesheet" href="/static/css/common.css?v=a0a6392" type="text/css" /><link rel="stylesheet" href="/static/css/index.css?v=d41d8cd" type="text/css" /><script src="/static/js/feather.js?v=2b6071c"></script><script>require.config={"baseurl":"/static/js","rules":[[/^([^:]+)?\:((?:[^\/]+\/)*)((?:(?!\.js).)+?)(\.js)?$/,function (_0, _1, _2, _3, _4){                    return (_1 ? _1 + '/' : '') + 'mod/' + _2 + _3 + (_4 ? _4 : ('/' + _3 + '.js'));                }],[/^.+$/,function (all){                    return /\.([^\.]+)$/.test(all) ? all : (all + '.js');                }]],"charset":"utf-8","map":{},"deps":{},"domain":""}</script><script>require.mergeConfig({"map":{"/static/js/index.js?v=f4989ce":["/static/js/index.js"],"/static/js/mod/jquery/jquery.js?v=f2f3c86":["/static/js/mod/jquery/jquery.js"]},"deps":{}})</script></head>
 
 <body>
 <div id="header">
-	<div></div>
+	<div class="s">
+		<em class="desc">an industrialized framework for frontend baesd on <a href="http://github.com/fis">fis</a></em>
+		<h1 class="logo">
+			feather
+		</h1>
+	</div>
+	
+	<ul class="project">
+		<li><a href="javascript:void(0);" data-href="/pagelet/feather/feather.html">feather</a></li>
+		<li><a href="javascript:void(0);" data-href="/pagelet/feather-ui/feather-ui.html">feather-ui</a></li>
+	</ul>
+</div>
+
+<div id="content">
+	<div id="left"></div>
+	<div id="right"></div>	
 </div>
 
 <script>
 require.async("/static/js/index.js");
 </script>
+
 </body>
 </html>

@@ -1,1 +1,1 @@
-console.log(123);
+require.async(":jquery",function(e){e("#header .project a").click(function(){e("#left").load(e(this).attr("data-href"))})});
