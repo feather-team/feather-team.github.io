@@ -1,0 +1,50 @@
+<script>require.mergeConfig({"map":{},"deps":{}})</script><p>安装feather：<p>
+<ul class="ul-list">
+	<li>安装nodejs，因feather为npm包，所以需要安装nodejs环境。</li>
+	<li>安装java，并配置环境变量，feather中的webserver依赖于java。</li>
+	<li>安装php(只需要安装一个解压版，将php添加至环境变量即可, linux和mac平台可用源码包安装php，只需要安装最简单版本即可)</li>
+</ul>
+
+<pre class="code" data-type="shell" data-title="npm安装feather">
+npm install -g feather
+</pre>
+
+<p>feather的4条命令，分别为：server, release, install, init</p>
+<ul class="ul-list">
+	<li>server：feather server的一些操作</li>
+	<li>release：编译产出操作</li>
+	<li>install：安装feather插件</li>
+	<li>init: 命令行创建项目</li>
+</ul>
+
+<pre class="code" data-type="shell" data-title="启动本调试服务器">
+feather server start --timeout 30 #timeout可在启动服务器超时使用，默认超时时间为15s 
+</pre>
+
+<p>feather有个比较简单的目录结构规范：</p>
+<pre data-type="shell">
+├── component
+├── page
+│   └── index.html
+├── static
+├── test
+├── feather_conf.js
+├── feather_rewrite.php
+├── feather_compatible.php
+</pre>
+
+<ul class="ul-list">
+	<li>component：模板小组件目录</li>
+	<li>page：page级别页面存放目录</li>
+	<li>static：page级别页面静态资源和其他静态资源存放目录</li>
+	<li>test：测试文件目录</li>
+	<li class="color-red">feather_conf.js: feather的配置文件, 此文件为必须存在的文件，点击查看<a href="#feather/config" class="link">常用配置</a></li>
+	<li>feather_rewrite.php: url转发文件，php项目中使用到转发功能的可使用此文件。</li>
+	<li>feather_compatible.php：兼容php调用中的错误或者执行一些php代码，比如某一个在模版中使用的php函数，本地无法模拟，可将其简单的定义在这个文件中。</li>
+</ul>
+
+<p>也可通过init项目脚手架来创建项目：</p>
+
+<pre class="code" data-type="shell" data-title="init创建项目">
+feather init -n web -m common -c utf-8 feather-project-common
+</pre>

@@ -1,0 +1,59 @@
+<script>require.mergeConfig({"map":{},"deps":{}})</script><pre class="code" data-type="js" data-title="feather_conf.js常用配置">
+feather.config.merge({
+	inlineMode: true,	//开启静态资源内联模式
+	autoCombine: true, 	//开启静态资源内联模式后，使用autocombine可自动合并页面上的零散资源
+
+	template: {
+		suffix: 'html'	//页面模版文件的后缀，只有设置为该后缀的文件模版文件才会被处理
+	},
+
+	md5Query: {
+		open: true,	//开启querystring中添加md5版本的功能
+		name: 'version'	//querystring的字段为哪一个，默认为v
+	},
+
+	project: {
+		ns: 'web',	//指定项目namespace
+	},
+
+	modulename: 'common',	//多模块项目时，需指定模块名才能进行跨common模块编译
+
+	//重写feather.js的require.config配置，可参考feather.js的github文档
+	require: {
+        config: {
+            baseurl: '/static/js',
+            rules: [],
+            charset: 'utf-8',
+            map: {},
+            deps: {},
+            domain: ''
+        }
+    },
+
+    //设置产出
+	deploy: {
+		local: [
+			{
+				from: '/static',
+	            //本地目录
+	            to: '../../feather-ui.github.io/static',
+	            include: /\/static\/.*/,
+	            subOnly: true
+			},
+			{
+	            from: '/view/page',
+	            //本地目录
+	            to: '../../feather-ui.github.io/',
+	            include: /\.html$/,
+	            subOnly: true
+	        },
+	        {
+	        	from: '/view/pagelet',
+	        	to: '../../feather-ui.github.io/pagelet',
+	        	include: /\.html$/,
+	        	subOnly: true
+	        }
+		]
+	}
+});
+</pre>
