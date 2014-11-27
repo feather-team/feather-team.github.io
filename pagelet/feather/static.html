@@ -50,3 +50,10 @@ paffe.config.set('pack', {
     'static/js/index_combine.js': ['/static/js/index.js', '/static/js/index2.js']
 });
 </pre>
+
+<p>feather同时还提供了 预览调试时会加载的文件，而且正式产出后不会被收集的配置, 方便本地调试时使用</p>
+<pre data-type="html" class="code">
+&lt;script src="/static/js/index.js" feather-dest-ignore>&lt;/script>
+</pre>
+
+<p class="color-red">关于页面静态资源合并打包，可配置autoCombine配置，注：该配置在inlineMode开启的时候才会生效</p>
