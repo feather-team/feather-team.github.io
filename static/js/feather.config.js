@@ -1,1 +1,1 @@
-require.config={baseurl:"/static/js",rules:[[/^([^:]+)?\:((?:[^\/]+\/)*)((?:(?!\.js).)+?)(\.js)?$/,function(s,e,r,t,u){return(e?e+"/":"")+"mod/"+r+t+(u?u:"/"+t+".js")}]],charset:"utf-8",map:{},deps:{}};
+require.config={baseurl:"/static/js",rules:[[/^([^:]+)?\:((?:[^\/]+\/)*)([^\.]+?)(\..+)?$/,function(e,r,s,t,u){return(r?r+"/":"")+"mod/"+s+t+(u?u:"/"+t+".js")}]],charset:"utf-8",map:{},deps:{}};
