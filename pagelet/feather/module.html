@@ -1,4 +1,4 @@
-<script>require.mergeConfig({"map":{},"deps":{}})</script><p>feather提供了非常方便的跨项目子模块依赖，以及编译 <span class="color-red">注：目前feather只支持调用 以common为模块名的子模块，编译非commo模块时，需要先编译一次对应的common模块，才能编译本模块，否则不能通过跨模块调用错误。</span></p><p>首先，我们在与feather-project同级的目录下利用feather init创建一个新项目叫feather-project-common</p><pre data-type="shell" class="code">
+<script>require.mergeConfig({"map":{},"deps":{}})</script><p>feather提供了非常方便的跨项目子模块依赖，以及编译<span class="color-red">注：目前feather只支持调用 以common为模块名的子模块，编译非commo模块时，需要先编译一次对应的common模块，才能编译本模块，否则不能通过跨模块调用错误。</span></p><p>首先，我们在与feather-project同级的目录下利用feather init创建一个新项目叫feather-project-common</p><pre data-type="shell" class="code">
 feather init -m common feather-project-common
 </pre><p>返回feather-project目录下，编辑feather_conf.js</p><pre data-type="js" data-title="feather_conf.js" class="code">
 feather.config.merge({

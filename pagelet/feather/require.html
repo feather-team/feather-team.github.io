@@ -54,7 +54,7 @@ require.async("/static/js/index2.js");
 &lt;/html>
 </pre><p>feather中默认对require.config做了配置，require.baseurl会默认为static/js，所以对index2.js的引用也可以这么写</p><pre class="code" data-type="js">
 require.async('index2.js'); 
-</pre><p>feather中js模块化使用：<br>feather中创建一个js模块非常简单，只需要在将这个js文件放置于任意目录下的mod目录, 比如：/static/js/mod/a.js, /static/js/mod/b.js 我们以第一个目录结构为例：<br><span class="color-red">注：在feather中 创建一个模块时，不需要define头部，feather会自动为任意目录mod目录下的所有文件添加define头，当然你也可以添加，feather会不做任何处理。</span></p><p>在static/js目录下创建mod目录，并添加文件：</p><pre class="code" data-type="js" data-title="/static/js/mod/a.js">
+</pre><p>feather中js模块化使用：<br />feather中创建一个js模块非常简单，只需要在将这个js文件放置于任意目录下的mod目录, 比如：/static/js/mod/a.js, /static/js/mod/b.js我们以第一个目录结构为例：<br /><span class="color-red">注：在feather中 创建一个模块时，不需要define头部，feather会自动为任意目录mod目录下的所有文件添加define头，当然你也可以添加，feather会不做任何处理。</span></p><p>在static/js目录下创建mod目录，并添加文件：</p><pre class="code" data-type="js" data-title="/static/js/mod/a.js">
 var b = require('./b.js');
 module.exports = {
     callName: function(){

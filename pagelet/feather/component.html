@@ -20,7 +20,7 @@
 require.async(['index.js', 'index2.js']);
 &lt;/script>
 &lt;?php $this->component('footer');?>
-</pre><p>编译后查看页面效果</p><p class="color-red">feather支持将component自己的css和js放置在与自己的模版同一目录下，包括image资源，互相调用时，直接写相对路径即可，比如./image/1.png<br>同时feather还支持不需要自己手动引入component的css和js，feather会自动引入，如果你手动引入了js或者css，feather则不会自动引入。<br>而产出后的component的静态资源会被放置在static/component中，便于日后直接对component迁移</p><p>比如我们给header创建自己的css和js，首先建一个/component/header目录，然后将component/header.html移动到这个目录中,并给其创建css和js</p><pre data-title="/component/header/header.css" data-type="css" class="code">
+</pre><p>编译后查看页面效果</p><p class='color-red'>feather支持将component自己的css和js放置在与自己的模版同一目录下，包括image资源，互相调用时，直接写相对路径即可，比如./image/1.png<br />同时feather还支持不需要自己手动引入component的css和js，feather会自动引入，如果你手动引入了js或者css，feather则不会自动引入。<br />而产出后的component的静态资源会被放置在static/component中，便于日后直接对component迁移</p><p>比如我们给header创建自己的css和js，首先建一个/component/header目录，然后将component/header.html移动到这个目录中,并给其创建css和js</p><pre data-title="/component/header/header.css" data-type="css" class="code">
 /*xxxx*/
 </pre><pre data-title="/component/header/header.js" data-type="js" class="code">
 //header.js
@@ -70,7 +70,7 @@ require.async(["index.js", "index2.js"]);
  
 &lt;/body>
 &lt;/html>
-</pre><p>feather同时还支持对component的单独调试。例如需要调试header组件，直接输入http://127.0.0.1:8080/component/header/header.html即可。</p><p><span class="color-red">单独调试的好处：<br>单页面可以拆分为多个功能模块，多个人同时开发一个页面，提高开发效率。<br>去除某一个功能时，不会造成忘记去除对应静态资源内容而造成的大量冗余的情况<br>页面调用组件只需要关心组件在哪，而不需要关心它所依赖的静态资源以及静态重复加载问题。<br>component可供多页面重复使用，提高重用率，独立调试可以提升组件的健壮和稳定性。</span></p><p>feather中对模版引入的写法做了规则匹配，默认的规则如下：</p><pre data-type="js" data-title="feather内置配置文件" class="code">
+</pre><p>feather同时还支持对component的单独调试。例如需要调试header组件，直接输入http://127.0.0.1:8080/component/header/header.html即可。</p><p><span class="color-red">单独调试的好处：<br />单页面可以拆分为多个功能模块，多个人同时开发一个页面，提高开发效率。<br />去除某一个功能时，不会造成忘记去除对应静态资源内容而造成的大量冗余的情况<br />页面调用组件只需要关心组件在哪，而不需要关心它所依赖的静态资源以及静态重复加载问题。<br />component可供多页面重复使用，提高重用率，独立调试可以提升组件的健壮和稳定性。</span></p><p>feather中对模版引入的写法做了规则匹配，默认的规则如下：</p><pre data-type="js" data-title="feather内置配置文件" class="code">
 template: {
     dest: '/view',
     suffix: 'html',
