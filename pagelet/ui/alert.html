@@ -1,0 +1,9 @@
+<script>require.mergeConfig({"map":{"/static/mod/alert/alert.js?version=ce3982b":["/static/mod/alert/alert.js"],"/static/mod/dialog/dialog.js?version=10fefe8":["/static/mod/dialog/dialog.js"],"/static/mod/jquery/jquery.js?version=434ccc3":["/static/mod/jquery/jquery.js"],"/static/mod/mask/mask.js?version=0ba4ca4":["/static/mod/mask/mask.js"],"/static/mod/mask/mask.css?version=e33fb8c":["/static/mod/mask/mask.css"],"/static/mod/dialog/dialog.css?version=1f0e909":["/static/mod/dialog/dialog.css"],"/static/mod/alert/alert.css?version=819428c":["/static/mod/alert/alert.css"]},"deps":{"/static/mod/alert/alert.js":["/static/mod/dialog/dialog.js","/static/mod/alert/alert.css"],"/static/mod/dialog/dialog.js":["/static/mod/jquery/jquery.js","/static/mod/mask/mask.js","/static/mod/dialog/dialog.css"],"/static/mod/mask/mask.js":["/static/mod/jquery/jquery.js","/static/mod/mask/mask.css"]}})</script><p>Alert 警告插件</p><p>方法列表：</p><ul class="ul-list"><li>alert:<script data-title="" type="text/html">
+require.async(":alert", function(Alert){
+	Alert.alert('简单Alert提示');
+})	
+		</script></li><li>confirm(content[, callback, unclose]);<script data-title="" type="text/html">
+require.async(":alert", function(Alert){
+	Alert.confirm('带回调的提示框',function(){alert("确定"),false});
+})	
+		</script></li></ul>
