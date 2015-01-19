@@ -1,0 +1,1 @@
+require.config={baseurl:"/static",rules:[[/^([^:]+)?\:((?:[^\/]+\/)*)([^\.]+?)(\..+)?$/,function(e,r,s,t,u){return(r?r+"/":"")+"mod/"+s+t+(u?u:"/"+t+".js")}]],charset:"utf-8",map:{},deps:{}};
