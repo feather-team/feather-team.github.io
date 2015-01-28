@@ -1,8 +1,8 @@
-<script>require.mergeConfig({"map":{"/static/mod/mask/mask.js?version=0ba4ca4":["/static/mod/mask/mask.js"],"/static/mod/jquery/jquery.js?version=434ccc3":["/static/mod/jquery/jquery.js"],"/static/mod/mask/mask.css?version=e33fb8c":["/static/mod/mask/mask.css"]},"deps":{"/static/mod/mask/mask.js":["/static/mod/jquery/jquery.js","/static/mod/mask/mask.css"]}})</script><p id="maskDemo">Mask 遮罩插件</p><p>参数列表：</p><ul class="ul-list"><li>container: dom选择器<script data-title="" type="text/html">
-require.async(":mask", function(Mask){
+<script>require.mergeConfig({"map":{"/static/common/mod/mask/mask.js?version=a804b4a":["/static/common/mod/mask/mask.js"],"/static/common/mod/jquery/jquery.js?version=c57faf4":["/static/common/mod/jquery/jquery.js"],"/static/common/mod/mask/mask.css?version=e33fb8c":["/static/common/mod/mask/mask.css"]},"deps":{"/static/common/mod/mask/mask.js":["/static/common/mod/jquery/jquery.js","/static/common/mod/mask/mask.css"]}})</script><p id="maskDemo">Mask 遮罩插件</p><p>参数列表：</p><ul class="ul-list"><li>container: dom选择器<script data-title="" type="text/html">
+require.async("common:mask", function(Mask){
 	window.mask = new Mask({
 	  autoOpen:true,
 	  container: "#maskDemo"
 	}).open();
 });
-		</script></li></ul><p>方法列表：</p><ul class="ul-list"><li>open(): 打开遮罩</li><li>close(): 关闭遮罩</li><li>destory(): 销毁对象</li><li>reset(): 重新设置mask的位置和大小</li></ul>
+		</script></li></ul><p>方法列表：</p><ul class="ul-list"><li>open(): 打开遮罩</li><li>close(): 关闭遮罩</li><li>destroy(): 销毁对象</li><li>resetPosition(): 重新设置mask的位置和大小</li></ul>
