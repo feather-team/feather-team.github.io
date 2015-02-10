@@ -1,4 +1,4 @@
-<script>require.mergeConfig({"map":{"/static/common/mod/template/template.js?version=e0316fb":["/static/common/mod/template/template.js"]},"deps":{}})</script><p>Template 模版引擎</p><p>使用方法：</p><ul class="ul-list"><li>fetch(domId): fetch用于快速获取一个元素内容，并返回执行后的结果<script type="text/html" data-type="none" id="test">
+<!--FEATHER STATIC POSITION:HEAD--><?php $this->load('/component/resource/usestyle.html', $this->get('FEATHER_USE_STYLES'));$this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_HEAD_SCRIPTS'));?><!--FEATHER STATIC POSITION END--><p>Template 模版引擎</p><p>使用方法：</p><ul class="ul-list"><li>fetch(domId): fetch用于快速获取一个元素内容，并返回执行后的结果<script type="text/html" data-type="none" id="test">
 	<%list.forEach(function(item){%>
 		<p><%=item.name%></p>
 	<%});%>
@@ -24,4 +24,4 @@ require.async("common:template",function(Template) {
 
 	alert(content);
 })
-		</script></li><li>parse(string): 直接执行一段字符串后返回结果</li></ul>
+		</script></li><li>parse(string): 直接执行一段字符串后返回结果</li></ul><!--FEATHER STATIC POSITION:BOTTOM--><?php $this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_BOTTOM_SCRIPTS'));?><!--FEATHER STATIC POSITION END-->

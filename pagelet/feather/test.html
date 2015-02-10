@@ -1,4 +1,4 @@
-<script>require.mergeConfig({"map":{},"deps":{}})</script><p>feather的本地调试功能非常强大，所有的url都可以模拟线上真实url，支持转发，不管是ajax数据还是随页面输出时动态输出的数据，同时还支持随机数据的生成。</p><p>模拟线上url，feather的url转发功能, 通过feather_rewrite.php，配置正则表达式来实现</p><pre data-type="php" data-title="feather_rewrite.php">
+<!--FEATHER STATIC POSITION:HEAD--><?php $this->load('/component/resource/usestyle.html', $this->get('FEATHER_USE_STYLES'));$this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_HEAD_SCRIPTS'));?><!--FEATHER STATIC POSITION END--><p>feather的本地调试功能非常强大，所有的url都可以模拟线上真实url，支持转发，不管是ajax数据还是随页面输出时动态输出的数据，同时还支持随机数据的生成。</p><p>模拟线上url，feather的url转发功能, 通过feather_rewrite.php，配置正则表达式来实现</p><pre data-type="php" data-title="feather_rewrite.php">
 &lt;?php
 return array(
     //访问/hello/world的时候 转发至/page/index.html
@@ -64,4 +64,4 @@ function a(){
 }
 
 error_reportint(E_ALL & ~E_NOTICE);//还可以关闭notice提示。
-</pre>
+</pre><!--FEATHER STATIC POSITION:BOTTOM--><?php $this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_BOTTOM_SCRIPTS'));?><!--FEATHER STATIC POSITION END-->

@@ -1,14 +1,28 @@
-<script>require.mergeConfig({"map":{"/static/common/mod/alert/alert.js?version=2774d1f":["/static/common/mod/alert/alert.js"],"/static/common/mod/dialog/dialog.js?version=8c755d7":["/static/common/mod/dialog/dialog.js"],"/static/common/mod/jquery/jquery.js?version=c57faf4":["/static/common/mod/jquery/jquery.js"],"/static/common/mod/mask/mask.js?version=a804b4a":["/static/common/mod/mask/mask.js"],"/static/common/mod/mask/mask.css?version=e33fb8c":["/static/common/mod/mask/mask.css"],"/static/common/mod/dialog/dialog.css?version=03c3b5d":["/static/common/mod/dialog/dialog.css"],"/static/common/mod/alert/alert.css?version=971dfa4":["/static/common/mod/alert/alert.css"]},"deps":{"/static/common/mod/alert/alert.js":["/static/common/mod/dialog/dialog.js","/static/common/mod/alert/alert.css"],"/static/common/mod/dialog/dialog.js":["/static/common/mod/jquery/jquery.js","/static/common/mod/mask/mask.js","/static/common/mod/dialog/dialog.css"],"/static/common/mod/mask/mask.js":["/static/common/mod/jquery/jquery.js","/static/common/mod/mask/mask.css"]}})</script><p>Alert 警告插件</p><p>方法列表：</p><ul class="ul-list"><li>alert(content[, dialogOptions]): content为显示的内容，dialogOptions同传递给dialog的参数，因alert是继承于dialog插件的。<script data-title="" type="text/html">
+<!--FEATHER STATIC POSITION:HEAD--><?php $this->load('/component/resource/usestyle.html', $this->get('FEATHER_USE_STYLES'));$this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_HEAD_SCRIPTS'));?><!--FEATHER STATIC POSITION END--><p>Alert 警告插件</p><p>方法列表：</p><ul class="ul-list"><li>alert(content[, callback, unclose, dialogOptions]): content为显示的内容，callback为点击确定后的回调，unclose可手动控制是否关闭, dialogOptions同传递给dialog的参数，因alert是继承于dialog插件的。<script data-title="" type="text/html">
 require.async("common:alert", function(Alert){
 	Alert.alert('简单Alert提示');
 })	
 		</script><script data-title="" type="text/html">
 require.async("common:alert", function(Alert){
-	Alert.alert('使用自定义的title', {
-		title: '哈哈哈哈'
+	Alert.alert('使用回调的alert', function(){
+		alert(123);
+	}, false, {
+		title: '使用回调'
 	});
 })	
-		</script></li><li>confirm(content[, callback, unclose, dialogOptions])：callback为点击确定后的回调， unclose可手动控制是否关闭。<script data-title="" type="text/html">
+		</script></li><li>warn(content[, callback, unclose, dialogOptions]): 参数同alert<script data-title="" type="text/html">
+require.async("common:alert", function(Alert){
+	Alert.warn('我是warn');
+})	
+		</script></li><li>success(content[, callback, unclose, dialogOptions]): 参数同alert<script data-title="" type="text/html">
+require.async("common:alert", function(Alert){
+	Alert.success('我是success');
+})	
+		</script></li><li>error(content[, callback, unclose, dialogOptions]): 参数同alert<script data-title="" type="text/html">
+require.async("common:alert", function(Alert){
+	Alert.error('我是error');
+})	
+		</script></li><li>confirm(content, callback[, unclose, dialogOptions])：参数同alert, 区别为callback为必填项。<script data-title="" type="text/html">
 require.async("common:alert", function(Alert){
 	Alert.confirm('带回调的提示框', function(){
 		alert("确定")
@@ -16,4 +30,4 @@ require.async("common:alert", function(Alert){
 		title: '带回调的提示框'
 	});
 })	
-		</script></li></ul>
+		</script></li></ul><!--FEATHER STATIC POSITION:BOTTOM--><?php $this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_BOTTOM_SCRIPTS'));?><!--FEATHER STATIC POSITION END-->

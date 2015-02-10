@@ -1,4 +1,4 @@
-<script>require.mergeConfig({"map":{},"deps":{}})</script><p>首先，feather有个比较简单的目录结构规范：</p><pre class="code" data-type="shell">
+<!--FEATHER STATIC POSITION:HEAD--><?php $this->load('/component/resource/usestyle.html', $this->get('FEATHER_USE_STYLES'));$this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_HEAD_SCRIPTS'));?><!--FEATHER STATIC POSITION END--><p>首先，feather有个比较简单的目录结构规范：</p><pre class="code" data-type="shell">
 ├── component
 ├── page
 │   └── index.html
@@ -76,4 +76,4 @@ feather.config.merge({
 
 	staticMode: true	//开启非map表管理方式
 });
-</pre><p>删除../dest目录， 再次执行feather release --dest ../dest 查看产出后的文件包以及文件内容有什么变化</p><p>如果想让所有的静态资源加上版本号怎么处理？试试执行feather release -m</p><p>更多feather release参数执行feather release -h查看，其中md5，pack和domain的配置可见<a href="#config">常用配置</a></p><p class="color-red">注：page页面不管是map还是非map管理方式，都必须保证输出时，html中必须要保证有head标签和body标签，否则静态资源可能无法正常输出。</p>
+</pre><p>删除../dest目录， 再次执行feather release --dest ../dest 查看产出后的文件包以及文件内容有什么变化</p><p>如果想让所有的静态资源加上版本号怎么处理？试试执行feather release -m</p><p>更多feather release参数执行feather release -h查看，其中md5，pack和domain的配置可见<a href="#config">常用配置</a></p><p class="color-red">注：page页面不管是map还是非map管理方式，都必须保证输出时，html中必须要保证有head标签和body标签，否则静态资源可能无法正常输出。</p><!--FEATHER STATIC POSITION:BOTTOM--><?php $this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_BOTTOM_SCRIPTS'));?><!--FEATHER STATIC POSITION END-->

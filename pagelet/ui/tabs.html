@@ -1,4 +1,4 @@
-<script>require.mergeConfig({"map":{"/static/common/mod/tabs/tabs.js?version=f8b544b":["/static/common/mod/tabs/tabs.js"],"/static/common/mod/jquery/jquery.js?version=c57faf4":["/static/common/mod/jquery/jquery.js"]},"deps":{"/static/common/mod/tabs/tabs.js":["/static/common/mod/jquery/jquery.js"]}})</script><p>Tabs 切换插件</p><p>参数列表：</p><ul class="ul-list"><li>dom:需要设置tab的dom元素（通常是a标签）</li><li>attr:元素的获取target标识的属性</li><li>currentClass:给选中的tab设置class</li><br/><div id="tabDomOne" class="tabDom"><a href="javascript:;" style="border-right:1px solid #E1E1E1">Page One</a><a href="javascript:;">Page Two</a></div><script data-title="" type="text/html" data-type="noclick">
+<!--FEATHER STATIC POSITION:HEAD--><?php $this->load('/component/resource/usestyle.html', $this->get('FEATHER_USE_STYLES'));$this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_HEAD_SCRIPTS'));?><!--FEATHER STATIC POSITION END--><p>Tabs 切换插件</p><p>参数列表：</p><ul class="ul-list"><li>dom:需要设置tab的dom元素（通常是a标签）</li><li>attr:元素的获取target标识的属性</li><li>currentClass:给选中的tab设置class</li><br/><div id="tabDomOne" class="tabDom"><a href="javascript:;" style="border-right:1px solid #E1E1E1">Page One</a><a href="javascript:;">Page Two</a></div><script data-title="" type="text/html" data-type="noclick">
 require.async("common:tabs", function(Tabs){
 	new Tabs({
 	  dom: '#tabDomOne a',
@@ -16,14 +16,14 @@ require.async("common:tabs", function(Tabs){
 	  currentIndex: 1
 	});
 });
-	</script><li>callback:切换后的回调函数<span style="color:red">（目前callback不支持传入点击对象，且初始化时就会触发一次）</span></li><br/><div id="tabDomThree" class="tabDom" style="width:330px"><a href="javascript:;" style="border-right:1px solid #E1E1E1">Page One</a><a href="javascript:;" style="border-right:1px solid #E1E1E1">Page Two</a><a href="javascript:;">Page Three</a></div><script data-title="" type="text/html" data-type="noclick">
+	</script><li>callback(index):切换后的回调函数<span style="color:red">（目前callback不支持传入点击对象，且初始化时就会触发一次）</span></li><br/><div id="tabDomThree" class="tabDom" style="width:330px"><a href="javascript:;" style="border-right:1px solid #E1E1E1">Page One</a><a href="javascript:;" style="border-right:1px solid #E1E1E1">Page Two</a><a href="javascript:;">Page Three</a></div><script data-title="" type="text/html" data-type="noclick">
 require.async("common:tabs", function(Tabs){
 	new Tabs({
 	  dom: '#tabDomThree a',
 	  attr: "href",     
 	  currentClass: "current",
 	  currentIndex: 1,
-	  callback: function(){alert("切换后的回调函数")}
+	  callback: function(index){alert("切换后的回调函数, 当前index为" + index)}
 	});
 });
-	</script></ul>
+	</script></ul><!--FEATHER STATIC POSITION:BOTTOM--><?php $this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_BOTTOM_SCRIPTS'));?><!--FEATHER STATIC POSITION END-->
