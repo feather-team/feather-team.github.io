@@ -1,4 +1,4 @@
-<script>require.mergeConfig({"map":{},"deps":{},"css":[]})</script><p>feather对pagelet的处理有2种，一种为正常的页面片段，用于ajax加载片段。另外一种为bigpipe或者bigrender所使用的需要后期处理封装才能使用的pagelet。</p><p>首先，ajax加载的正常的页面片段使用方式非常简单，首先在项目根目录下需要创建一个pagelet目录，然后创建一个pagelet，比如/pagelet/a/a.html:</p><pre data-type="html" class="code" data-title="/pagelet/a/a.html">
+<script>require.mergeConfig({"map":{},"deps":{}})</script><p>feather对pagelet的处理有2种，一种为正常的页面片段，用于ajax加载片段。另外一种为bigpipe或者bigrender所使用的需要后期处理封装才能使用的pagelet。</p><p>首先，ajax加载的正常的页面片段使用方式非常简单，首先在项目根目录下需要创建一个pagelet目录，然后创建一个pagelet，比如/pagelet/a/a.html:</p><pre data-type="html" class="code" data-title="/pagelet/a/a.html">
 <div>这是一个pagelet</div>
 </pre><p>然后分别创建/pagelet/a/a.css, /pagelet/a/a.js</p><p>修改index2.js</p><pre data-type="js" class="code" data-title="/static/index/index2.js">
 require.async(':jquery', function($){
