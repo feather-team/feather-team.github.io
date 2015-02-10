@@ -1,4 +1,4 @@
-<!--FEATHER STATIC POSITION:HEAD--><?php $this->load('/component/resource/usestyle.html', $this->get('FEATHER_USE_STYLES'));$this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_HEAD_SCRIPTS'));?><!--FEATHER STATIC POSITION END--><p>关于feather.js的详细文档，可访问feather的<a href="" class="link">github</a>，更多js模块化的解说，可详情百度。THANK YOU！</p><p>在feather中，feather.js为内置，编译时会自动加上，在代码中只需要直接调用feather.js所提供的方法即可</p><pre data-type="html" class="code" data-title="/page/index.html">
+<script>require.mergeConfig({"map":{},"deps":{},"css":[]})</script><p>关于feather.js的详细文档，可访问feather的<a href="" class="link">github</a>，更多js模块化的解说，可详情百度。THANK YOU！</p><p>在feather中，feather.js为内置，编译时会自动加上，在代码中只需要直接调用feather.js所提供的方法即可</p><pre data-type="html" class="code" data-title="/page/index.html">
 &lt;html>
 &lt;head>
 &lt;title>index.phtml&lt;/title>
@@ -140,4 +140,4 @@ feather.config.set('require.config.rules', [
 ]);
 </pre><pre class="code" data-type="js" data-title="/static/index/index2.js">
 require.async('a');
-</pre><p class="color-red">另外除了规则后，require.async也支持相对路径调用，值得注意的是，在某一个文件中require.async的相对路径是相对于当前文件。</p><!--FEATHER STATIC POSITION:BOTTOM--><?php $this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_BOTTOM_SCRIPTS'));?><!--FEATHER STATIC POSITION END-->
+</pre><p class="color-red">另外除了规则后，require.async也支持相对路径调用，值得注意的是，在某一个文件中require.async的相对路径是相对于当前文件。</p>

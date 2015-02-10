@@ -1,4 +1,4 @@
-<!--FEATHER STATIC POSITION:HEAD--><?php $this->load('/component/resource/usestyle.html', $this->get('FEATHER_USE_STYLES'));$this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_HEAD_SCRIPTS'));?><!--FEATHER STATIC POSITION END--><p>Page分页组件</p><p>参数列表</p><ul class="ul-list"><li>dom: 指定一个容器元素</li><li>pageTotal: 总页数, 这个值必须为整型<br /><div id="page-pagetotal" style="height: 40px;"></div><script data-type="noclick" type="text/html">
+<script>require.mergeConfig({"map":{"/static/common/mod/page/page.js?version=a1cac8c":["/static/common/mod/page/page.js"],"/static/common/mod/jquery/jquery.js?version=c57faf4":["/static/common/mod/jquery/jquery.js"],"/static/common/mod/page/page.css?version=4273fc2":["/static/common/mod/page/page.css"]},"deps":{"/static/common/mod/page/page.js":["/static/common/mod/jquery/jquery.js","/static/common/mod/page/page.css"]},"css":[]})</script><p>Page分页组件</p><p>参数列表</p><ul class="ul-list"><li>dom: 指定一个容器元素</li><li>pageTotal: 总页数, 这个值必须为整型<br /><div id="page-pagetotal" style="height: 40px;"></div><script data-type="noclick" type="text/html">
 require.async("common:page", function(Page){
 	new Page({
 		dom: '#page-pagetotal',
@@ -9,4 +9,4 @@ require.async("common:page", function(Page){
 		}
 	})
 });
-	</script></li><li>perPage: 显示的页数</li><li>url: 为所有页码加上一个跳转链接，page组件会自动在url的结尾加上当前page的值，所以url需要自行加上page的字段名，以?page=的形式结尾</li><li>first: 是否一直显示第一页</li><li>last: 是否一直显示最后一页</li><li>currentPage: 当前第几页</li><li>currentPageClassName: 当前页码的样式名，可自行定义样式</li><li>callback(page): 每次点击页码时触发的回调函数，参数回传当前点击的页码index，如果是ajax加载，可以在这边加载数据</li></ul><p>方法列表：</p><ul class="ul-list"><li>pageTo(page): 直接跳转到某一页</li></ul><!--FEATHER STATIC POSITION:BOTTOM--><?php $this->load('/component/resource/usescript.html', $this->get('FEATHER_USE_BOTTOM_SCRIPTS'));?><!--FEATHER STATIC POSITION END-->
+	</script></li><li>perPage: 显示的页数</li><li>url: 为所有页码加上一个跳转链接，page组件会自动在url的结尾加上当前page的值，所以url需要自行加上page的字段名，以?page=的形式结尾</li><li>first: 是否一直显示第一页</li><li>last: 是否一直显示最后一页</li><li>currentPage: 当前第几页</li><li>currentPageClassName: 当前页码的样式名，可自行定义样式</li><li>callback(page): 每次点击页码时触发的回调函数，参数回传当前点击的页码index，如果是ajax加载，可以在这边加载数据</li></ul><p>方法列表：</p><ul class="ul-list"><li>pageTo(page): 直接跳转到某一页</li></ul>
