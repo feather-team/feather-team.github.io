@@ -11,7 +11,7 @@ class Template{
 			'domain' => 'http://static.xxx.com',
 			'maps' => glob('/data/maps/**.php'),	//可不设置，插件自动读取template_dir下的map目录，或者template_dir同级的map目录
 			'cachine' => true, //开启缓存
-			'cache' => new Feather_View_File_Cache, //使用cache助手，此类必须继承于Feather_View_Cache_Abstract
+			'cache' => new Feather_View_File_Cache(array('cache_dir' => '/data/cache')), //使用cache助手，此类必须继承于Feather_View_Cache_Abstract
 		));
 	}
 
