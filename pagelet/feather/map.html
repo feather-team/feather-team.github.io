@@ -1,6 +1,6 @@
 <script>require.mergeConfig({"map":{},"deps":{}})</script><p>项目上线之前需要后端的模版引擎配合加载map表，如果是非map表模式则不需要，后端可选择feather提供的模版引擎<a class="link" href="https://github.com/feather-ui/feather_view">feather_view</a>，也可以使用自己的模版引擎。</p><p>选择使用自己模版引擎的项目，可使用适配器模式：</p><pre class="code" data-type="php">
 &lt;?php
-class Template{
+class TemplateAdapter{
 	protected $view;
 
 	public function __construct(){
