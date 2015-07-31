@@ -1,4 +1,4 @@
-<script>require.mergeConfig({"map":{},"deps":{}})</script><p>feather中的项目下可以划分很多模块，模块可指定为一些互相独立的业务。</p><p>feather中指定一个项目名很简单，可在init时指定，也可直接修改feather_conf.js</p><pre data-type="js" data-title="/feather_conf.js" class="code">
+<script>require.mergeConfig({"map":{},"deps":{}})</script><p>feather中建议，将2个完全独立的系统作为2个项目，以指定项目名用来区分，项目下可以划分很多模块，模块可指定为一些独立但有存在依赖的业务。另当本地有多个项目，非common模块依赖common模块编译时，也需要借助项目名来对到底引用哪个common模块进行区分</p><p>feather中指定一个项目名很简单，可在init时指定，也可直接修改feather_conf.js</p><pre data-type="js" data-title="/feather_conf.js" class="code">
 feather.config.set('project.name', 'aa');
 </pre><p>指定一个项目名后，开发者可以根据项目名来识别当前处于哪个项目的哪个模块开发，很清晰。</p><p>另feather已取消release后会多创建一层项目名的目录结构，如果静态资源的baseurl有需要，可自行配置statics配置，比如：</p><pre class="code" data-type="js">
 feather.config.set('statics', '/a/b/c/d');	//默认为/static，所以生成后的url开头为/static/xxx
