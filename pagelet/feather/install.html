@@ -4,4 +4,4 @@ npm install -g feather-s
 feather server start --timeout 30 #timeout可在启动服务器超时使用，默认超时时间为15s 
 </pre><p>可以下载<a href="http://github.com/feather-team/feather-demo">feather-demo</a>，也可通过init项目脚手架来创建项目：</p><pre class="code" data-type="shell" data-title="init创建项目">
 feather init -n web -m common -c utf-8 feather-project-common #项目名web、common模块、utf-8编码
-</pre><p>进入项目目录，执行feather release，可以看到页面效果</p>
+</pre><p>进入项目目录，执行feather release，可以看到页面效果</p><p>feather release常用参数，可查看--help查看所有参数</p><ul class="ul-list"><li>-o：优化代码和压缩</li><li>-p：合并打包</li><li>-c：清空编译缓存和预览模式的文件</li><li>-D: 静态资源使用域名</li><li>-m：使用md5管理文件版本</li><li>-w: 开启watch功能，自动监听文件变化，进行编译</li><li>-L：开启livereload，自动刷新浏览器</li><li>-d：产出至指定目录或使用deploy配置中的key</li></ul>
