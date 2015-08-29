@@ -1,7 +1,7 @@
 <script>require.mergeConfig({"map":{},"deps":{}})</script><p>安装feather：<p><ul class="ul-list"><li>安装nodejs，因feather为npm包，所以需要安装nodejs环境。</li><li>如需本地调试功能，需安装java，并配置环境变量，feather中的webserver依赖于java。</li><li>如需本地调试功能，需安装php(只需要安装一个解压版，将php添加至环境变量即可, linux和mac平台可用源码包安装php，只需要安装最简单版本即可)</li></ul><pre class="code" data-type="shell" data-title="npm安装feather">
 npm install -g feather-s
-</pre><p>feather的4条命令，分别为：server, release, install, init</p><ul class="ul-list"><li>server：feather server的一些操作</li><li>release：编译产出操作</li><li>install：安装feather插件</li><li>init: 命令行创建项目</li></ul><pre class="code" data-type="shell" data-title="启动本调试服务器">
+</pre><p>feather的5条命令，分别为：server, release, install, init，switch</p><ul class="ul-list"><li>server：feather server的一些操作</li><li>release：编译产出操作</li><li>install：安装feather插件</li><li>init: 命令行创建项目</li><li>switch：切换至项目下预览，如果切换至某一项目时，浏览器上的输入的地址则是相对与该项目的</li></ul><pre class="code" data-type="shell" data-title="启动本调试服务器">
 feather server start --timeout 30 #timeout可在启动服务器超时使用，默认超时时间为15s 
 </pre><p>可以下载<a href="http://github.com/feather-team/feather-demo">feather-demo</a>，也可通过init项目脚手架来创建项目：</p><pre class="code" data-type="shell" data-title="init创建项目">
 feather init -n web -m common -c utf-8 feather-project-common #项目名web、common模块、utf-8编码
-</pre><p>进入项目目录，执行feather release，可以看到页面效果</p><p>feather release常用参数，可查看--help查看所有参数</p><ul class="ul-list"><li>-o：优化代码和压缩</li><li>-p：合并打包</li><li>-c：清空编译缓存和预览模式的文件</li><li>-D: 静态资源使用域名</li><li>-m：使用md5管理文件版本</li><li>-w: 开启watch功能，自动监听文件变化，进行编译</li><li>-L：开启livereload，自动刷新浏览器</li><li>-d：产出至指定目录或使用deploy配置中的key</li></ul>
+</pre><p>进入项目目录，执行feather release，可以看到页面效果</p><p>feather release常用参数，可查看--help查看所有参数</p><ul class="ul-list"><li>-o：优化代码和压缩</li><li>-p：合并打包</li><li>-c：清空编译缓存和预览模式的文件</li><li>-D: 静态资源使用域名</li><li>-m：使用md5管理文件版本</li><li>-w: 开启watch功能，自动监听文件变化，进行编译</li><li>-L：开启livereload，自动刷新浏览器</li><li>-d：产出至指定目录或使用deploy配置中的key</li><li>-r：指定项目目录</li></ul><p>注：release后，会自动执行feather switch [当前所在项目名]</p>
